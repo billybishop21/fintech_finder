@@ -1,8 +1,16 @@
 # FinTech Finder
 
 # Program
+ 
+ The program is set to integrate the Ethereum Blockchain network into the application in order to enable customers to instantly pay our list of FinTech professionals for their services. 
 
+Below, you will find an image of the webpage with the user interface:
 
+![tx_1.png](tx_1.png)
+
+Lastly, here is an example of the following transaction recorded on the blockchain:
+
+![tx_2.png](tx_2.png)
 
 ---
 
@@ -11,7 +19,18 @@
 The following technologies were used in the creation of this PyChain:
 
 ```python
-
+import streamlit as st
+from dataclasses import dataclass
+from typing import Any, List
+import os
+import requests
+from dotenv import load_dotenv
+load_dotenv()
+from bip44 import Wallet
+from web3 import Account
+from web3.auto.infura.kovan import w3
+from web3 import middleware
+from web3.gas_strategies.time_based import medium_gas_price_strategy
 ```
 
 ---
